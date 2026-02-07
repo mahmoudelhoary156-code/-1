@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>لعبة النجاة وجمع النقاط - النسخة العملاقة</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- شاشة البداية العملاقة -->
+<div id="startScreen" class="overlay">
+    <header>
+        <h1>🎮 مرحبًا بك في لعبة النجاة العملاقة! 🎮</h1>
+        <p>تحرك بالمفتاح ← أو → لتفادي الأعداء وجمع النقود الذهبية. احذر من الصعوبات المتزايدة!</p>
+    </header>
+
+    <section id="startOptions">
+        <div class="option">
+            <label for="difficulty">اختر مستوى الصعوبة:</label>
+            <select id="difficulty">
+                <option value="easy">سهل</option>
+                <option value="medium" selected>متوسط</option>
+                <option value="hard">صعب</option>
+            </select>
+        </div>
+        <div class="option">
+            <label for="playerColor">اختر لون الشخصية:</label>
+            <select id="playerColor">
+                <option value="red" selected>أحمر</option>
+                <option value="blue">أزرق</option>
+                <option value="green">أخضر</option>
+                <option value="yellow">أصفر</option>
+            </select>
+        </div>
+        <button id="startBtn">ابدأ اللعبة</button>
+    </section>
+
+    <footer class="startFooter">
+        <p>نسخة عملاقة 2026 | تم تصميمها باستخدام HTML, CSS, JavaScript</p>
+    </footer>
+</div>
+
+<!-- شاشة اللعبة الرئيسية -->
+<div id="gameContainer" class="hidden">
+    <!-- منطقة اللعبة -->
+    <div id="gameArea">
+        <div id="player"></div>
+        <!-- يمكن أن تظهر هنا الأعداء والنقود ديناميكيًا -->
+    </div>
+
+    <!-- لوحة المعلومات العملاقة -->
+    <aside class="infoPanel">
+        <h2>الإحصائيات المتقدمة</h2>
+        <ul>
+            <li>النقاط: <span id="score">0</span></li>
+            <li>المستوى: <span id="level">1</span></li>
+            <li>العملات المجمعة: <span id="coinsCollected">0</span></li>
+            <li>الأعداء المتجاوزين: <span id="enemiesDodged">0</span></li>
+            <li>أفضل سجل: <span id="highScore">0</span></li>
+            <li>الوقت: <span id="timer">0</span> ثانية</li>
+        </ul>
+        <button id="restartBtn">إعادة اللعب</button>
+    </aside>
+</div>
+
+<!-- تعليمات اللعبة العملاقة -->
+<section class="instructions">
+    <h2>تعليمات اللعبة المتقدمة</h2>
+    <ol>
+        <li>استخدم أسهم الكيبورد ← → لتحريك اللاعب.</li>
+        <li>تجنب الاصطدام بالأعداء الأزرق أو الأحمر.</li>
+        <li>اجمع النقود الذهبية والمكافآت لزيادة النقاط.</li>
+        <li>كل 10 نقاط، تزيد سرعة اللعبة وصعوبة المستويات.</li>
+        <li>يمكنك إعادة تشغيل اللعبة باستخدام زر "إعادة اللعب".</li>
+        <li>تتبع الوقت وحاول تحقيق أعلى سجل ممكن.</li>
+        <li>تحتوي اللعبة على مؤثرات صوتية عند جمع العملات أو الاصطدام بالأعداء (يمكن إضافتها لاحقًا).</li>
+        <li>يمكنك تخصيص لون الشخصية قبل بدء اللعبة.</li>
+        <li>الهدف هو البقاء أطول فترة ممكنة وجمع أكبر عدد من النقاط.</li>
+    </ol>
+</section>
+
+<!-- شاشة نهاية اللعبة العملاقة -->
+<div id="gameOverScreen" class="overlay hidden">
+    <header>
+        <h1>🏆 انتهت اللعبة! 🏆</h1>
+    </header>
+    <section id="gameOverStats">
+        <p>لقد جمعت <span id="finalScore">0</span> نقطة</p>
+        <p>العملات المجمعة: <span id="finalCoins">0</span></p>
+        <p>الأعداء المتجاوزين: <span id="finalEnemies">0</span></p>
+        <p>أفضل سجل: <span id="finalHighScore">0</span></p>
+        <p>الوقت المستغرق: <span id="finalTime">0</span> ثانية</p>
+    </section>
+    <section id="gameOverButtons">
+        <button id="playAgainBtn">إعادة اللعب</button>
+        <button id="goToStartBtn">العودة لشاشة البداية</button>
+    </section>
+</div>
+
+<!-- Footer العملاق -->
+<footer>
+    <p>&copy; 2026 لعبة النجاة العملاقة | تم تطويرها باستخدام HTML, CSS, JavaScript | جميع الحقوق محفوظة</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
